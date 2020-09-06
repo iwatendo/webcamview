@@ -1,60 +1,39 @@
-﻿
+﻿html, body {
+    height: 100%;
+}
+
 body {
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-.sbj-title{
     margin: 0px;
-    color: whitesmoke;
+    border: 0px;
+    padding: 0;
+    width: 100%;
+    font-family: "Roboto","Hiragino Kaku Gothic ProN","Meiryo", sans-serif;
 }
 
-.sbj-main {
-    background-color: var(--sbj-color-default-background);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
+#web-camera-view-main{
+    margin: 16px 32px;
 }
 
-.sbj-header .mdl-layout__header-row {
-  padding-left: 40px;
+.web-camera-view-device{
+    padding: 0px 0px 16px 0px;
 }
 
-.sbj-container {
-  max-width: 960px;
-  width: calc(100% - 16px);
-  margin: 0 auto;
+.web-camera-view-device-select{
+    outline: 0;
+    width: 420px;
 }
 
-.sbj-content {
-  border-radius: 2px;
-  background-color: var(--sbj-color-default-background);
+.web-camera-view--header-row{
+    padding: 0px 20px 0px 32px;
 }
 
-.sbj-footer {
-  padding-left: 40px;
+#web-camera-view-title {
+    padding: 0px 20px 0px 0px;
 }
 
-.sbj-footer .mdl-mini-footer--link-list a {
-  font-size: 13px;
+#web-camera-view-video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: scale(-1, 1);
 }
-
-#sbj-start-tooltip{
-  text-align: left;
-  max-width: 280px;
-}
-
-.sbj-text-warning{
-  color:var(--sbj-color-warning-text);
-}
-
-.sbj-cell{
-  padding: 8px;
-}
-
-a{
-  text-decoration: none;
-}
-a:link {color: var(--sbj-color-link-text);}    
-a:visited {color: var(--sbj-color-link-text);}
-a:hover {color: var(--sbj-color-link-text);} 

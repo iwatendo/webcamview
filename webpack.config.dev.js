@@ -3,11 +3,11 @@ module.exports = {
   mode: 'development',  
 
   entry: {
-    webcameraviewer: './src/Page/CastInstance/Script.ts',
+    webcameraviewer: './src/Page/Script.ts',
   },
   output: {
     path: __dirname + '/dist',
-    filename: '[name]/bundle.js'
+    filename: 'bundle.js'
   },
   externals: {
     'react': 'React',

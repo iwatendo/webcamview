@@ -2,7 +2,7 @@
 
 import DeviceItemComponent from "./DeviceItemComponent";
 import { DeviceView } from "./DeviceVew";
-import DeviceUtil from '../../Base/Util/DeviceUtil';
+import DeviceUtil from '../../Util/DeviceUtil';
 
 
 /**

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import DeviceUtil, { DeviceKind } from "../../Base/Util/DeviceUtil";
+import DeviceUtil, { DeviceKind } from "../../Util/DeviceUtil";
 
 import DeviceComponent from "./DeviceComponent";
 
