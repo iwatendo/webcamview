@@ -11,38 +11,29 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:description" content="Web Camera Viewer">
     <link rel="icon" type="image/vnd.microsoft.icon" href="/image/favicon_cast.ico">
-    <link rel='stylesheet' href='/lib/material.min.css' />
+    <link rel='stylesheet' href='lib/material.min.css' />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel='stylesheet' href='style.css' />
-    <script src="/lib/material.min.js"></script>
+    <script src="lib/material.min.js"></script>
 </head>
 
 <body>
 
     <div id="web-camera-view-layout"
         class="web-camera-view-layout mdl-layout mdl-js-layout mdl-color--grey-100 mdl-layout--fixed-header mdl-shadow--4dp">
-
-        <header class="web-camera-view-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
-            <div class="web-camera-view--header-row mdl-layout__header-row">
-                <span id="web-camera-view-title" class="mdl-layout-title">
-                    Web Camera Viewer
-                </span>
-
-                <div class="web-camera-view-device-select mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-select"
-                    id="webcam-select-div">
+        <main class="mdl-layout__content">
+            <div id="webcam-select-box">
+                <div id="webcam-select-div"
+                    class="web-camera-view-device-select mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-select">
                     <input class="mdl-textfield__input" type="text" spellcheck="false" readonly id="webcam-select" />
-                    <label class="mdl-textfield__label" for="webcam-select" maxlength='32'>Camera</label>
+                    <label class="mdl-textfield__label" for="webcam-select" maxlength='32'>Web Camera Viewer</label>
                     <ul id="webcam-list" class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
                         for="webcam-select">
                         <li class="mdl-menu__item" onclick=""></li>
                     </ul>
                 </div>
-
             </div>
 
-        </header>
-
-        <main class="mdl-layout__content">
             <video id='web-camera-view-video' autoplay="true">
             </video>
         </main>
