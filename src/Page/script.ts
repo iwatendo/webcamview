@@ -13,7 +13,7 @@ if (StdUtil.IsSupoortPlatform(true)) {
             location.reload();
         };
         navigator.getUserMedia = navigator.getUserMedia || (navigator as any).webkitGetUserMedia || (navigator as any).mozGetUserMedia;
-        navigator.getUserMedia({ video: true, audio: true }, (stream) => { reload(); }, (err) => { reload(); });
+        navigator.getUserMedia({ video: true, audio: false }, (stream) => { reload(); }, (err) => { reload(); });
     }
     else {
         SetMediaDevice();
@@ -28,24 +28,6 @@ function SetMediaDevice() {
     let preMic = LocalCache.LiveCastOptions.SelectMic;
     let preCam = LocalCache.LiveCastOptions.SelectCam;
     let isInit = (!preMic && !preCam);
-
-    DeviceUtil.GetAudioDevice((devices) => {
-
-        let textElement = document.getElementById('mic-select') as HTMLInputElement;
-        var listElement = document.getElementById('mic-list') as HTMLElement;
-
-        var view = new DeviceView(DeviceKind.Audio, textElement, listElement, devices, (deviceId, deviceName) => {
-            LocalCache.SetLiveCastOptions((opt) => opt.SelectMic = deviceId);
-        });
-
-        if (isInit) {
-            view.SelectFirstDevice();
-        } else {
-            view.SelectDeivce(preMic);
-        }
-
-        document.getElementById("mic-select-div").classList.add("is-dirty");
-    });
 
     DeviceUtil.GetVideoDevice((devices) => {
 
