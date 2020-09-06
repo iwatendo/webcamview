@@ -37,23 +37,14 @@ export default class StdUtil {
         let errmsg = "";
 
         if (isGeneral) {
-            if (name === 'firefox' || name === 'firefox for ios') {
+            if(name === 'microsoft edge'){
                 return true;
-            }
-            else if (name === 'safari') {
-                if (platform.version >= '10.2') {
-                    return true;
-                }
-                else {
-                    errmsg = '未対応のブラウザバージョンです。\niOS11.2以降に対応しています';
-                }
             }
             errmsg = "未対応のブラウザです\n";
             errmsg += "このページは以下のブラウザに対応しています\n"
             errmsg += "\n";
-            errmsg += "・FireFox\n";
             errmsg += "・Google Chrome\n";
-            errmsg += "・Safari\n";
+            errmsg += "・Microsoft Edge\n";
         }
         else {
             errmsg = "未対応のブラウザです。\n";

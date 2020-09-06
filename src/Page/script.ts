@@ -25,9 +25,8 @@ if (StdUtil.IsSupoortPlatform(true)) {
  */
 function SetMediaDevice() {
 
-    let preMic = LocalCache.LiveCastOptions.SelectMic;
-    let preCam = LocalCache.LiveCastOptions.SelectCam;
-    let isInit = (!preMic && !preCam);
+    let preCam = LocalCache.CameraOptions.SelectCam;
+    let isInit = (!preCam);
 
     DeviceUtil.GetVideoDevice((devices) => {
 
@@ -37,7 +36,7 @@ function SetMediaDevice() {
 
         var view = new DeviceView(DeviceKind.Video, textElement, listElement, devices, (deviceId, deviceName) => {
 
-            LocalCache.SetLiveCastOptions((opt) => opt.SelectCam = deviceId);
+            LocalCache.SetCameraOptions((opt) => opt.SelectCam = deviceId);
 
             if (deviceId) {
                 let msc = StreamUtil.GetMediaStreamConstraints(deviceId, null);
