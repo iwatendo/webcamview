@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Web Camera Viewer</title>
+    <meta charset='utf-8'>
+    <meta name="description" content="Web Camera Viewer" />
+    <meta property="og:title" content="Web Camera Viewer">
+    <meta property="og:description" content="Web Camera Viewer">
+    <meta property="og:url" content="https://skybeje.net/castinstance/">
+    <meta property="og:image" content="https://skybeje.net/image/ogp-image.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="Web Camera Viewer">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/image/favicon_cast.ico">
+    <link rel='stylesheet' href='/lib/material.min.css' />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel='stylesheet' href='../common.css' />
+    <link rel='stylesheet' href='../common.castprop.css' />
+    <link rel='stylesheet' href='style.css' />
+    <script src="/lib/material.min.js"></script>
+</head>
+
+<body>
+
+    <div id="sbj-cast-instance-layout"
+        class="sbj-cast-instance-layout mdl-layout mdl-js-layout mdl-color--grey-100 mdl-layout--fixed-header mdl-shadow--4dp">
+
+        <header class="sbj-cast-instance-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+            <div class="sbj-cast-instance--header-row mdl-layout__header-row">
+                <span id="sbj-cast-instance-title" class="mdl-layout-title">
+                    Web Camera Viewer
+                </span>
+
+                <!-- Mic -->
+                <div hidden
+                    class="sbj-cast-instance-device-select mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-select"
+                    id="mic-select-div">
+                    <input class="mdl-textfield__input" type="text" spellcheck="false" readonly id="mic-select" />
+                    <label class="mdl-textfield__label" for="mic-select" maxlength='40'>mic</label>
+                    <ul id="mic-list" class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                        for="mic-select">
+                        <li class="mdl-menu__item"></li>
+                    </ul>
+                </div>
+                
+                <!-- Camera -->
+                <div class="sbj-cast-instance-device-select mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-select"
+                    id="webcam-select-div">
+                    <input class="mdl-textfield__input" type="text" spellcheck="false" readonly id="webcam-select" />
+                    <label class="mdl-textfield__label" for="webcam-select" maxlength='32'>Camera</label>
+                    <ul id="webcam-list" class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                        for="webcam-select">
+                        <li class="mdl-menu__item" onclick=""></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </header>
+
+        <main class="mdl-layout__content">
+            <video id='sbj-video' autoplay="true">
+            </video>
+        </main>
+    </div>
+
+    <script src="/lib/react.min.js"></script>
+    <script src="/lib/react-dom.min.js"></script>
+    <script src="bundle.js"></script>
+
+</body>
+
+</html>
